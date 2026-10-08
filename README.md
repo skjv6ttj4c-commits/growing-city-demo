@@ -17,3 +17,11 @@
 - 下载 `journey.html` 可独立离线打开，无需外部依赖。模拟记录仅在本次页面会话生效。
 
 在线新版：https://skjv6ttj4c-commits.github.io/growing-city-demo/journey.html
+
+## 滑动生长版
+
+`stroll.html` 以手机原生滚动控制镜头、建筑生长、重复消费痕迹与结尾全景。反向滑动可回看，顶部可切换近一个月、半年、一年；结尾再展开地点和权益依据。采用主题叙事，不暗示连续消费时间或实际路线。支持减少动态效果偏好。
+
+在线体验：https://skjv6ttj4c-commits.github.io/growing-city-demo/stroll.html
+
+此前两版文件和地址均保留。
