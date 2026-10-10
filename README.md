@@ -25,3 +25,13 @@
 在线体验：https://skjv6ttj4c-commits.github.io/growing-city-demo/stroll.html
 
 此前两版文件和地址均保留。
+
+## 镜头漫游版
+
+`lens.html` 将节点放大为近景，标题与记录跟随建筑的屏幕投影出现，次数、评价、日期与会员优惠直接展示。使用全页原生滚动惯性、轻量镜头跟随，以及阅读点附近的弱停靠；支持反向回看和减少动态效果。
+
+底部相机式时间拨杆在松手后切换范围，若当前地点在新区间仍有记录，则保留该地点。结束时才拉远展示全城。示例数据时钟为 2026-10-08。
+
+在线体验：https://skjv6ttj4c-commits.github.io/growing-city-demo/lens.html
+
+`node build-lens.mjs` 复用 `stroll.html` 的城市资产与数据，结合 `lens-source.html` 与 `lens-runtime.js` 生成独立可下载的 `lens.html`。不会改动既有三个版本。
