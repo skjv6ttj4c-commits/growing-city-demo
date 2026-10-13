@@ -19,6 +19,20 @@ body.overview-mode{overflow:hidden}body.overview-mode .track{height:100svh}.bar{
 @media(min-width:540px){.screen{box-shadow:0 0 100px #8260ab20}.dialog{bottom:15px;border-radius:23px}}
 @media(max-height:740px){:root{--wheel:250px}.bar{padding-top:4px}.narrative h1{font-size:23px}.detail-label strong{font-size:13px}.quote{font-size:11px;margin-top:4px}.dates{font-size:9px;margin-top:3px}.benefit{margin-top:4px;padding:3px 7px}.detail-label{padding:6px 9px}.journey-status{margin-bottom:5px}.dock{padding-top:5px}.dial{margin-top:9px}.wheel-options button{top:38px;font-size:10px;min-width:64px}.wheel-options button:nth-child(1),.wheel-options button:nth-child(3){top:58px}.intro h1{font-size:29px;margin-top:9px}.intro-heading{top:3%}.intro-stats{margin-bottom:13px}.intro-stats b{font-size:19px}.intro-bottom{bottom:20px}.end-options{bottom:200px}.wheel-caption{font-size:8px}}
 @media(max-width:350px){.narrative h1{font-size:22px}.dock{padding-left:16px;padding-right:16px}.intro-heading{left:16px;right:16px}.intro h1{font-size:28px}.intro-bottom{left:24px;right:24px}.intro-stats{gap:24px}.kicker{font-size:9px}.journey-status{font-size:9px}}
+/* Opening-only finish: restrained pearl glass, etched arcs, and editorial numerals. */
+.intro-bottom{isolation:isolate;left:24px;right:24px}
+.intro-bottom:before{content:"";position:absolute;z-index:-2;inset:-80px -65px -85px;pointer-events:none;background:radial-gradient(ellipse at 70% 100%,#8b59d653,transparent 65%),radial-gradient(ellipse at 5% 60%,#c1a0ef1f,transparent 57%);filter:blur(8px)}
+.intro-bottom:after{content:"";position:absolute;z-index:-1;left:-20%;right:-35%;top:-29px;height:300px;border-radius:50%;border:1px solid #e4cbff26;background:linear-gradient(160deg,#d2b8ff12 0%,#b989f606 29%,transparent 61%);box-shadow:0 -9px 0 -8px #e5cfff13,0 -27px 0 -26px #dfc8ff12,0 -48px 0 -47px #dfc8ff0c,inset 0 20px 36px -34px #f2dfff;transform:rotate(-13deg);pointer-events:none}
+.intro-stats{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;margin-bottom:24px;padding-top:8px}
+.intro-stats:before{content:"";position:absolute;inset:-25px -24px -94px;background-image:radial-gradient(#dcc7fa38 .55px,transparent .75px);background-size:5px 5px;mask-image:linear-gradient(135deg,transparent 5%,#0007 43%,transparent 76%);z-index:-1;pointer-events:none}
+.intro-stats>div{position:relative}.intro-stats>div+div:before{content:"";position:absolute;left:0;top:12px;width:1px;height:44px;background:linear-gradient(transparent,#e5c7ff30,transparent)}
+.intro-stats b{display:flex;align-items:baseline;justify-content:center;gap:5px;font-family:Didot,"Bodoni 72",Georgia,serif;font-size:46px;font-weight:400;font-variant-numeric:lining-nums tabular-nums;line-height:1.12;letter-spacing:-1px;color:#f6e8ff;text-shadow:0 0 20px #c7a1ed30}
+.intro-stats b em{font:400 11px/1 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;letter-spacing:0;color:#d9c4eb}
+.intro-stats span{font-size:10px;letter-spacing:.35px;color:#d0bcdf;margin-top:7px;white-space:nowrap}
+.intro #enter{font-weight:700;letter-spacing:1.2px;min-height:54px;box-shadow:0 8px 30px #b576f526,inset 0 1px #fff}
+.intro #enter span{font-weight:500}.intro small{color:#ad98c4;font-size:8px}
+@media(max-height:740px){.intro-stats{margin-bottom:18px;padding-top:4px}.intro-stats b{font-size:39px}.intro-stats>div+div:before{top:8px;height:38px}.intro-bottom:after{top:-22px}.intro #enter{min-height:50px}}
+@media(max-width:350px){.intro-bottom{left:18px;right:18px}.intro-stats{gap:2px}.intro-stats span{font-size:9px;letter-spacing:0}.intro-stats b{font-size:37px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style></head>
 <body class="overview-mode">
@@ -36,7 +50,7 @@ body.overview-mode{overflow:hidden}body.overview-mode .track{height:100svh}.bar{
 <div class="floor-fade"></div><div class="end-options" hidden><button id="facts">查看记录依据</button><button id="restart">再走一遍 ↺</button></div>
 <section class="intro" aria-label="生活城全貌">
 <div class="intro-heading"><div class="eyebrow">MY LIFE · IN FOCUS</div><h1>您在美团的日子，<br>长成了一座城</h1><p>熟悉的地方，新的相遇。<br>每一处，都藏着你的生活。</p></div>
-<div class="intro-bottom"><div class="intro-stats"><div><b id="intro-places">7</b><span>留下记忆的地方</span></div><div><b id="intro-new">2</b><span>本月新相遇</span></div><div><b id="intro-again">2</b><span>本月又见面</span></div></div><button id="enter">看看本月城事<span aria-hidden="true">↗</span></button><small>虚构记录演示 · 非实际城市地图</small></div>
+<div class="intro-bottom"><div class="intro-stats" aria-label="首屏概念示例数据"><div><b>7<em>次</em></b><span>黑钻权益使用</span></div><div><b>2</b><span>新相遇的店铺</span></div><div><b>2</b><span>本月留下评价</span></div></div><button id="enter">看看本月城事<span aria-hidden="true">↗</span></button><small>首屏数据为概念示例 · 非真实账单</small></div>
 </section>
 </div>
 <footer class="dock" inert aria-hidden="true"><div class="journey-status"><span id="hint">↑ 轻推继续 · ↓ 随时回看</span><div class="steps" aria-hidden="true"></div><span id="chapter-name"></span></div><div class="dial-title"><span>时间取景<strong id="scale-name">近一个月</strong></span><span id="period"></span></div><div class="dial-help" id="dial-help">沿圆弧轻拨 · 松手重新取景</div>
@@ -92,8 +106,8 @@ function buildChapters(preferred=null){
  $('.steps').innerHTML=chapters.map(()=>'<i></i>').join('');
  $('#cafe-cups').innerHTML=coffeeRows.map((e,i)=>{const c=get('coffee'),x=c.x-30+i*8,y=c.y-19+i*2;return '<g class="cup"><path d="M'+x+' '+y+'h5l-.5 6h-4Z" fill="#ffeec7"/><path d="M'+(x+5)+' '+(y+1)+'q4 2 0 4" fill="none" stroke="#ffeec7"/></g>';}).join('');
  $('#period').textContent=fmt(spans[range].start).slice(2)+' — '+fmt(END).slice(2);
- $('#intro-places').textContent=stores.filter(s=>first(s.id)<=END).length;
- $('#intro-new').textContent=fresh.length;$('#intro-again').textContent=again.length;
+ // The opening uses the art-directed 7/2/2 concept fixture, not the tour ledger.
+ // Keep it separate from time-filtered records; the intro explicitly labels this.
  updateDial(rangeKeys.indexOf(range));chapter=-1;
 }
 function updateDial(v){

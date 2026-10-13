@@ -35,8 +35,8 @@ function buildChapters(preferred=null){
  $('.steps').innerHTML=chapters.map(()=>'<i></i>').join('');
  $('#cafe-cups').innerHTML=coffeeRows.map((e,i)=>{const c=get('coffee'),x=c.x-30+i*8,y=c.y-19+i*2;return '<g class="cup"><path d="M'+x+' '+y+'h5l-.5 6h-4Z" fill="#ffeec7"/><path d="M'+(x+5)+' '+(y+1)+'q4 2 0 4" fill="none" stroke="#ffeec7"/></g>';}).join('');
  $('#period').textContent=fmt(spans[range].start).slice(2)+' — '+fmt(END).slice(2);
- $('#intro-places').textContent=stores.filter(s=>first(s.id)<=END).length;
- $('#intro-new').textContent=fresh.length;$('#intro-again').textContent=again.length;
+ // The opening uses the art-directed 7/2/2 concept fixture, not the tour ledger.
+ // Keep it separate from time-filtered records; the intro explicitly labels this.
  updateDial(rangeKeys.indexOf(range));chapter=-1;
 }
 function updateDial(v){
